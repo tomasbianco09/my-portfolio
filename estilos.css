@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Kanit', sans-serif;
+    font-size: inherit;
+    font-weight: 900;
+}
+
+/*Estilos para el nav*/
+header {
+    width: 100%;
+    height: 4.5rem;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+    margin: 0 8rem;
+}
+
+.nav-ul {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+}
+
+.nav-h2 {
+    letter-spacing: 3px;
+}
+
+/*Estilos para el main*/
+
+main {
+    background-color: brown;
+    flex-grow: 1;
+    text-align: center;
+}
+
+span {
+    color: wheat;
+    /* O el color que más te guste */
+    font-weight: bold;
+}
+
+/*Estilos para section home*/
+
+.home-container {
+
+    background-color: #f7f7f7;
+
+    height: 100vh;
+
+    min-height: 900px;
+
+    padding: 13rem 15rem 0px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+.home-container-2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-texts {
+    text-align: left;
+    width: 30rem;
+}
+
+.home-texts h1 {
+    font-size: 3.7rem;
+    letter-spacing: 2px;
+}
+
+.home-p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 25rem;
+    margin: 2rem 0px 2.7rem;
+}
+
+.home-img {
+    background-color: aqua;
+    width: 25rem;
+}
+
+.home-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-skills h3 {
+    font-size: 1.2rem;
+    ;
+    margin: 1rem 0;
+
+}
+
+.skills {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    box-sizing: border-box;
+    width: 30rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    
+}
+
+.skill-a img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.skill-b img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.skill-c img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.footer {
+    background-color: wheat;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: .5rem 0;
+}
