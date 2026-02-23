@@ -4,13 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     font-family: 'Open Sans', sans-serif;
-    font-size: inherit;
-    font-weight: 900;
+    background-color: rgb(10, 10, 10);
+    background-image: radial-gradient(circle at center,
+            rgb(23, 23, 23) 0%,
+            rgb(10, 10, 10) 100%)
 }
 
 /*Estilos para el nav*/
@@ -18,11 +24,11 @@ body {
 header {
     width: 100%;
     height: 4.5rem;
-    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
     position: sticky;
     top: 0;
     left: 0;
-    background-color: white;
+    backdrop-filter: blur(10px);
+    background-color: rgba(203, 213, 225, 0.5);
     z-index: 100;
     display: flex;
     align-items: center;
@@ -30,34 +36,48 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 10rem;
     width: 100%;
     padding: 0 5%;
     margin: 0 8rem;
+    font-style: inherit;
+    font-weight: bold;
 }
-
-
-.nav-ul {
-    list-style: none;
-    gap: 20px;
-    display: flex;
-}
-
-.nav-ul a{
-    text-decoration: none;
-    color: #000;
-}
-
 
 .nav-h2 {
     letter-spacing: 3px;
 }
 
+.nav-ul {
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    border-bottom: 3px;
+}
+
+.nav-ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid #000000;
+}
+
+
+.nav-items-container {
+    display: flex ;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-item a {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+
 /*Estilos para el main*/
 
 main {
-    background-color: brown;
     flex-grow: 1;
     text-align: center;
 }
@@ -66,9 +86,7 @@ main {
 
 .home-container {
 
-    background-color: #f7f7f7;
-
-    min-height: 850px;
+    height: 940px;
 
     /*padding: 13rem 15rem 0px;*/
 
@@ -77,6 +95,8 @@ main {
     flex-direction: column;
 
     justify-content: center;
+
+    position: relative;
 
 }
 
@@ -95,10 +115,11 @@ main {
 .home-texts h1 {
     font-size: 3.7rem;
     letter-spacing: 2px;
+    color: rgb(248, 250, 252);
 }
 
-.home-texts span{
-    color: rgb(57, 86, 167);
+.home-texts span {
+    color: rgb(248, 238, 100);
     /* O el color que más te guste */
     font-weight: bold;
 }
@@ -108,18 +129,23 @@ main {
     font-weight: 500;
     width: 25rem;
     margin: 2rem 0px 2.7rem;
+    color: rgb(203, 213, 225);
 }
 
-.home-icons  {
+.home-icons-container {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
 }
 
-.home-icons img {
-    width: 2rem;
-    height: 2rem;
-    
+.home-icon i {
+    font-size: 2rem;
+    color: rgb(248, 238, 100);
+    transition: 0.5s;
+}
+
+.home-icon i:hover {
+    transform: scale(1.1);
 }
 
 .home-img {
@@ -127,9 +153,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*border-radius: 20px;
-    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
-    /*background-color: bisque;*/
 }
 
 .home-img img {
@@ -137,57 +160,293 @@ main {
     width: 20rem;
 }
 
-.home-profile img{
-    margin-top: 1.5rem;
+.home-arrow {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.home-arrow i {
+    font-size: 2.5rem;
+    color: rgb(248, 238, 100);
+    transition: 0.3s;
+}
+
+.home-arrow i:hover {
+    transform: scale(1.1);
+}
+
+
+/* Estilos about */
+
+.about-container {
+    
+    min-height: 940px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.about-container-2 h1 {
+    color: rgb(248, 250, 252);
+    margin-bottom: 2rem;
+}
+
+.about-description {
+    background: rgba(23, 23, 23, 0.6);
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    text-align: left;
+    width: 40rem;
+    padding: 2rem;
+}
+
+.about-description h2 {
+    color: rgb(248, 250, 252);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.about-description p {
+    color: rgb(203, 213, 225);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.about-description span {
+    color: rgb(248, 238, 100);
+    font-weight: bold;
+}
+
+.about-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-item-box {
+    width: 15rem;
+    padding: 25px;
+    background: rgba(23, 23, 23, 0.6);
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 2rem;
+    transition: 0.5s;
+} 
+
+.about-item-box:hover {
+    transform: scale(1.1);
+}
+
+.about-item-box a {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.about-item-box i {
+    color: rgb(248, 250, 252);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.about-item-box p {
+    color: rgb(248, 250, 252);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Estilos contacto */
+
+.contact-container {
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-text h1 {
+    color: rgb(248, 250, 252);
+    margin-bottom: 2rem;
+}
+
+.contact-text p {
+    justify-content: center;
+    width: 30rem;
+    color: rgb(248, 250, 252);
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.contact-text span {
+    color: rgb(248, 238, 100);
+}
+
+.contact-box {
+    background: rgba(23, 23, 23, 0.6);
+    border-radius: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    padding: 2rem 6rem;
+}
+
+.home-icon {
+    text-align: left;
+}
+
+.home-icon a{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.home-icon p{
+    color: rgb(203, 213, 225);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Estilos proyects */
+
+.proyects-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proyects-container-2 h1 {
+    color: rgb(248, 250, 252);
+    margin-bottom: 2rem;
+}
+
+.proyects-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.proyects-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: 65rem; /* Deja que el Grid controle el ancho */
+    height: 30rem; /* Es mejor que el alto se ajuste al contenido */
+    border-radius: 2rem;
+    background-color: rgba(23, 23, 23, 0.6); /* El fondo oscuro que venimos usando */
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.proyects-img-1 {
+    border-radius: 0.5rem;
+    width: 25rem;
+    height: 15rem; /* ¡IMPORTANTE! Sin esto la imagen no aparece */
+    background: url(asetss/noirsports-7ae91eb1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.proyects-cloud {
+    background-color: rgb(27, 27, 27);
+    width: 184px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+    color: rgb(248, 250, 252);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.proyects-cloud i {
+    font-size: 1.5rem;
+}
+
+.proyects-cloud p {
+    font-size: 1.2rem;
+}
+
+.proyects-text {
+    text-align: left;
+    justify-content: center;
+    width: 25rem;
+}
+
+.proyects-text h2{
+     color: rgb(248, 250, 252);
+}
+
+.proyects-text p {
+    color: rgb(203, 213, 225);
+    font-size: 1.2rem;
+}
+
+.proyects-tecn {
+    margin-top: 2rem;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgb(27, 27, 27);
+}
+
+.proyectos-div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.proyects-tecn-img-1 img {
     height: 2rem;
     width: 2rem;
 }
 
-.home-skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.home-skills h3 {
-    font-weight: 900;
-    font-size: 2.5em;
-    letter-spacing: -.02em;
-    color: #000;
-    text-align: center;
-    padding-top: 80px;
-    padding-bottom: 40px;
-
-}
-/*
-.skills {
-    background-color: rgb(255, 255, 255);
-    border-radius: 2rem;
-    box-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
-    box-sizing: border-box;
-    width: 30rem;
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem;
-}
-
-.skill-a img {
-    height: 2.5rem;
+.proyects-tecn-img img {
+    height: 2rem;
     width: 2.5rem;
 }
 
-.skill-b img {
-    height: 2.5rem;
-    width: 2.5rem;
-}
 
-.skill-c img {
-    height: 2.5rem;
-    width: 2.5rem;
-}
-*/
 .footer {
-    background-color: wheat;
+    background-color: rgb(245, 222, 179);
     color: rgb(0, 0, 0);
     font-size: 2rem;
     text-align: center;
