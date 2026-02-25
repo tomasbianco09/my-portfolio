@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facundo Bianco</title>
+    <title>Facundo Bianco / Portfolio</title>
     <link rel="icon" type="image/x-icon" href="asetss/code.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,16 +20,15 @@
 
 <body>
     <header class="header">
-
-        <nav>
-            <h2 class="nav-h2">TOMI</h2>
-            <ul class="nav-ul">
+        <nav class="nav-container">
+            <h2>TOMI</h2>
+            <ul class="nav-ul-container">
                 <li> <a href="#home">HOME</a></li>
                 <li> <a href="#about">ABOUT</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
-            <div class="nav-items-container">
+            <div class="nav-item-container">
                 <div class="nav-item">
                     <a href="https://github.com/tomasbianco09" target="_blank">
                         <i class="fa-brands fa-github"></i>
@@ -43,40 +42,31 @@
             </div>
         </nav>
     </header>
-    <main>
 
-        <section id="home" class="home-container">
-            <div class="home-container-2">
-                <div class="home-texts">
+    <main>
+        <section id="home" class="home-section">
+            <div class="home-container">
+                <div class="home-texts-container">
                     <h1>Software Developer</h1>
-                    <p class="home-p">Hola, soy <span>Facundo Tomas Bianco</span>.
+                    <p>Hola, soy <span>Facundo Tomas Bianco</span>.
                         <br>
                         Actualmente me encuentro formandome en la Universidad Nacional de Cuyo, en la tecnicatura de
                         Desarrollo de Software
                     </p>
-                    <div class="home-icons-container">
-                        <div class="home-icon">
-                            <a href="https://github.com/tomasbianco09" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </div>
-
-                        <div class="home-icon">
-                            <a href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <div class="home-icon">
-                            <a href="https://www.instagram.com/tomibianco/?hl=es-la" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
+                    <div class="home-socials-container">
+                        <a href="https://github.com/tomasbianco09" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/tomibianco/?hl=es-la" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="home-img">
+                <div class="home-img-container">
                     <img src="asetss/profile.png" alt="">
-
                 </div>
             </div>
             <div class="home-arrow">
@@ -86,11 +76,11 @@
             </div>
         </section>
 
-        <section id="about" class="about-container">
-            <div class="about-container-2">
-                <h1>About me</h1>
-                <div class="about-description">
-                    <h2>An a Web Developer </h2>
+        <section id="about" class="about-section">
+            <div class="about-container">
+                <h2>About me</h2>
+                <div class="about-text-container">
+                    <h3>An a Web Developer </h3>
                     <p>Hola! Soy estudiante de la <span>Tecnicatura en Desarrollo de Software en la Universidad Nacional
                             de Cuyo</span>.
                         <br>
@@ -106,108 +96,119 @@
                         <span>¡Gracias por visitar mi portfolio!</span>
                     </p>
                 </div>
-                <div class="about-items">
-                    <div class="about-item-box">
-                        <a href="asetss/BiancoCV.pdf" target="_blank">
-                            <p>Curriculum</p>
+                <div class="about-btn-container">
+                    <a href="asetss/BiancoCV.pdf" target="_blank">
+                        <div class="about-btn">
                             <i class="fa-jelly fa-regular fa-file"></i>
-                        </a>
-                    </div>
-                    <div class="about-item-box">
-                        <a href="#contact">
+                            <p>Curriculum</p>
+                        </div>
+                    </a>
+                    <a href="#contact">
+                        <div class="about-btn">
+                            <i class="fa-solid fa-envelope"></i>
                             <p>Contact me</p>
-                            <i style="font-weight: 700;" class="fa-solid fa-envelope"></i>
-                        </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="projects-container">
+                <h2>Proyectos</h2>
+                <div class="projects-box-container">
+                    <div class="projects-visual-col">
+                        <div class="projects-img-noir"></div>
+                        <div class="projects-btn-container">
+                            <a class="project-btn" href="https://github.com/tomasbianco09/Proyect-ReactJs"
+                                target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <p>Repositorio</p>
+                            </a>
+                            <a class="project-btn" href="https://noiresports.netlify.app/" target="_blank">
+                                <i class="fa-brands fa-connectdevelop"></i>
+                                <p>Sitio Web</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="projects-info-col">
+                        <div class="projects-text-container">
+                            <h3>Noir Store</h3>
+                            <p>A personalized ecommerce for an eSports store. Beautiful, functional and
+                                minimalistic.
+                            </p>
+                        </div>
+                        <div class="projects-tech-container">
+                            <img class="projects-tech-img-js" src="asetss/javascript-30558d7e.png" alt="">
+                            <img class="projects-tech-img" src="asetss/css-8e01670c-8e01670c.svg" alt="">
+                            <img class="projects-tech-img" src="asetss/html-52732337-52732337.svg" alt="">
+                            <img class="projects-tech-img" src="asetss/react-19291084.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-box-container">
+                    
+                    <div class="projects-info-col">
+                        <div class="projects-text-container">
+                            <h3>Burger Joint</h3>
+                            <p>A full view page for fast food restaurant, with their food & drinks menu. 
+                            </p>
+                        </div>
+                        <div class="projects-tech-container">
+                            <img class="projects-tech-img-js" src="asetss/javascript-30558d7e.png" alt="">
+                            <img class="projects-tech-img" src="asetss/css-8e01670c-8e01670c.svg" alt="">
+                            <img class="projects-tech-img" src="asetss/html-52732337-52732337.svg" alt="">
+                            <img class="projects-tech-img" src="asetss/react-19291084.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="projects-visual-col">
+                        <div class="projects-img-burger"></div>
+                        <div class="projects-btn-container">
+                            <a class="project-btn" href="https://github.com/tomasbianco09/menu"
+                                target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <p>Repositorio</p>
+                            </a>
+                            <a class="project-btn" href="https://thenoirburgerjoint.netlify.app/" target="_blank">
+                                <i class="fa-brands fa-connectdevelop"></i>
+                                <p>Sitio Web</p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="proyects-container">
-            <div class="proyects-container-2">
-                <h1>Proyectos</h1>
-                <div class="proyects-box-container">
-                    <div class="proyects-box">
-                        <div style="display: flex; flex-direction: column;">
-                            <div class="proyects-img-1"></div>
-                            <div style="display: flex; flex-direction: wrap; justify-content: center; gap: 2rem;">
-                                <a class="proyects-cloud" href="https://github.com/tomasbianco09/Proyect-ReactJs"
-                                    target="_blank">
-                                    <i class="fa-brands fa-github"></i>
-                                    <p>Repositorio</p>
-                                </a>
-                                <a class="proyects-cloud" href="https://noiresports.netlify.app/" target="_blank">
-                                    <i class="fa-brands fa-connectdevelop"></i>
-                                    <p>Sitio Web</p>
-                                </a>
-                            </div>
-                        </div>
-                        <div>
-
-                            <div class="proyects-text">
-                                <h2>Noir Store</h2>
-                                <p>A personalized ecommerce for an eSports store. Beautiful, functional and
-                                    minimalistic.
-                                </p>
-                            </div>
-                            <div class="proyects-tecn">
-                                <div class="proyectos-div">
-                                    <div class="proyects-tecn-img-1">
-                                        <img src="asetss/javascript-30558d7e.png" alt="">
-                                    </div>
-                                    <div class="proyects-tecn-img">
-                                        <img src="asetss/css-8e01670c-8e01670c.svg" alt="">
-                                    </div>
-                                    <div class="proyects-tecn-img">
-                                        <img src="asetss/html-52732337-52732337.svg" alt="">
-                                    </div>
-                                    <div class="proyects-tecn-img">
-                                        <img src="asetss/react-19291084.png" alt="">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="contact" class="contact-container">
-            <div class="contact-container-2">
-                <div class="contact-text">
-                    <h1>Contact</h1>
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-text-container">
+                    <h2>Contact</h2>
                     <p>Si estás interesado en <span>contratarme</span>, ¡<span>llámame</span>, envíame un <span> correo
                             electrónico</span> o <span>conéctate</span> y chatea conmigo a través de LinkedIn!</p>
                 </div>
 
-                <div class="contact-box">
-                    <div class="home-icon">
-                        <a href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <p>+54 9 261 2068823</p>
-                        </a>
-                    </div>
-                    <div class="home-icon">
-                        <a href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
-                            <i class="fa-regular fa-envelope"></i>
-                            <p>work.tomasbianco@gmail.com</p>
-                        </a>
-                    </div>
-                    <div class="home-icon">
-                        <a href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <p>Tomas Bianco</p>
-                        </a>
-                    </div>
+                <div class="contact-btn-container">
+                    <a class="contact-btn" href="https://wa.me/5492612068823" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <p>+54 9 261 2068823</p>
+                    </a>
+                    <a class="contact-btn" href="mailto:work.tomasbianco@gmail.com" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>work.tomasbianco@gmail.com</p>
+                    </a>
+                    <a class="contact-btn"  href="https://www.linkedin.com/in/facundo-bianco-2625ab248/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <p>Tomas Bianco</p>
+                    </a>
                 </div>
             </div>
         </section>
 
     </main>
     <footer class="footer">
-        <h3>FOOTER</h3>
+        <h3>Gracias por visitar!</h3>
     </footer>
     <script src="script.js"></script>
 </body>
